@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+<script type="text/javascript" src="validateradiobutton.js"></script>  
+ <script>
+$(document).ready(function () {
+	
+       $("#form1 #form2 #form3").submit(function () {
+           $.ajax({
+               type: "POST",
+               url: "suleiman.aspx.cs", 
+               data: $(this).serialize(),
+               complete: function (data) {
+                   window.location = 'Confirmation.html'; 
+               }
+           });
+
+       });
+   });
+   });
+</script>
+	
+</head>
+<body>
+	
+<form>			
+<a href="index.html"><button type="button" class="btn btn-primary btn-lg btn-block"><font color=black>Sign Out</button></a></font><br>	
+<p><font color="black">Would you like to have free donuts at Seyfarth Shaw every day?</font></p>
+<form>
+<div class=”question”><form class="required"> 
+<input type="radio" name="donuts" value="Yes"><font color=black>Yes</font>
+<input type="radio" name="donuts" value="No"><font color=black>No</font>
+</form><br><br>
+<a href="NewVoteTopics.html"><button type="button" id="btnBack" class="btn btn-primary btn-lg btn-block">Back</button></a><br><br>
+<button type="button" id="btnSend" class="btn btn-default btn-lg btn-block"><font color=black>Send</font></button></a>
+</form>
+
+</body>
+</html>

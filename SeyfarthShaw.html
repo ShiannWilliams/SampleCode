@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<body background="shaw1.jpg">
+<head>
+	<div id="">
+	<img src=""> 
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<title>
+	</title>
+	<Script language="JavaScript">
+			function showError(message) {
+				var errorDiv = document.getElementById('error');
+				errorDiv.innerHTML = message;
+			}
+
+			function showPass(form) {
+
+
+				var user = form.username.value;
+				var pass = form.pwd.value;
+
+
+
+
+				var user1 = "partner@seyfarthshaw.com" 
+				var pass1 = "password"
+				var admin ="admin@seyfarthshaw.com"
+				var pass2 = "adminpassword"
+
+					if (user == user1 && pass == pass1) {
+					window.location.href="Choice.html";
+					
+					} else if (user == admin && pass == pass2) {
+
+					window.location.href="http://www.yahoo.com";
+
+
+					} else{
+
+
+					showError("Wrong Username or Password<br> Please try again")
+
+
+					}	
+			}
+
+
+	function remempwd(form) {
+
+		
+				var user = form.username.value;
+				var pass = form.pwd.value;
+
+
+
+
+				var user1 = "partner@seyfarthshaw.com" 
+				var pass1 = "password"
+				var admin ="admin@seyfarthshaw.com"
+				var pass2 = "adminpassword"
+				
+				if (user == user1) {
+					window.location.href="ticket.html"
+				
+				} else if (user == admin ){
+
+					window.location.href ="ticket.html"
+				} else if (user= "" ){
+
+					window.location.href="ticket.html"
+				} else {
+
+				}
+
+	}
+
+
+
+
+
+	</script>
+
+</head>
+
+
+
+
+
+
+
+<body>
+	<form>
+		<div id="logininfo">
+			<label>Username:</label>
+				 <input type="text" name="username" maxlength ="30"/><br /><br />
+			<label>Password:</label>
+			  <input type="Password" name="pwd"/><br /><br />
+		<div id="error"></div>
+
+				<input type="button" value="Log In" onclick="showPass(form)" />
+				<input type="button" value="Remember Password" onclick="remempwd(form)" />
+		</div>
+	</form>
+	
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <link rel="stylesheet" , href="style.css">
+<link rel="stylesheet" , href="style/animate.css">
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+ <head>	  
+ <script>
+$(document).ready(function () {
+	
+       $("#form1 #form2 #form3").submit(function () {
+           $.ajax({
+               type: "POST",
+               url: "suleiman.aspx.cs", 
+               data: $(this).serialize(),
+               complete: function (data) {
+                   window.location = 'Confirmation.html'; 
+               }
+           });
+
+       });
+   });
+   });
+</script>
+<div id="logo">
+<img src="time.png">
+
+</head>
+
+<body>
+	
+<form>			
+<p class ="myButton" id="CreateE" onClick="location.href='index.html'" >Sign Out</p><br></font>	
+
+<p><font color="black">Would you say Seyfarth Shaw has great leaders?</font></p>
+<div class=”question”><form class="required"> 
+<input type="radio" name="Election" value="Yes"><font color=black>Yes</font>
+<input type="radio" name="Election" value="No"><font color=black>No</font>
+</form></div><br>
+
+<p class ="myButton" id="Sign Out" onClick="location.href='NewVoteTopics.html'" >Back</p><br>
+<p class ="myButton" id="Sign Out" onClick="checkValidation();" >Submit</p><br>
+</form>
+ <script type="text/javascript" src="Seyfarth App/Theme/assets/js/jquery.js"></script>
+<script type="text/javascript" src="validateradiobutton.js"></script>
+</body>
+</html>
